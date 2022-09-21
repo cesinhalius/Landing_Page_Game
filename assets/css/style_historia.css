@@ -1,3 +1,8 @@
+:root{
+    --color:#bdc3c7;
+}
+
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 *{
     border: none;
@@ -6,18 +11,22 @@
     margin: 0;
     padding: 0;
 }
+body {
+    background: rgba(0, 0, 0, .9)
+}
 header{
     align-items: center; 
     display: flex;
 }
 .logo{
-    margin: 5px 15px;
+    margin: 5px 
 }
 .logo img{
     background: transparent;
     height: 15vh;
-    padding: 5px 10px 2px;
+    padding: 5px  ;
     left: 20rem;
+    border: 1px solid red ;
 }
 .menu{
     margin-left: 20rem;
@@ -37,4 +46,28 @@ header{
     padding: 15px;
     text-decoration: none;
     
+}
+.list .back, 
+.list .image, 
+.list .person{
+    color: var(--color);
+    cursor: pointer;
+    margin-right: 20px;
+   
+}
+
+.back img{
+    border: 1px solid red;
+    height: 7vh;
+    
+}
+
+.book{
+    width: 50%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color);
+    border: 1px solid blue;
 }
