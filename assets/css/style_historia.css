@@ -1,5 +1,6 @@
 :root{
     --color:#bdc3c7;
+    --font-family:'Roboto',sans-serif;
 }
 
 
@@ -26,7 +27,6 @@ header{
     height: 15vh;
     padding: 5px  ;
     left: 20rem;
-    border: 1px solid red ;
 }
 .menu{
     margin-left: 20rem;
@@ -57,17 +57,61 @@ header{
 }
 
 .back img{
-    border: 1px solid red;
     height: 7vh;
     
 }
 
 .book{
-    width: 50%;
-    height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background: #000;
+    border: 1px solid #000;
+    border-radius: 5px;
     color: var(--color);
-    border: 1px solid blue;
+    display: flex;
+    height: 233vh;
+    text-align: center;
+    width: 50%;
+    margin-left: 20rem;
+}
+
+.history{
+    margin: 30px;
+}
+.history span{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.history p#begin,
+.history p#half,
+.history p#end{
+    font-size: 18px;
+    font-family: var(--font-family);
+    color: var(--color);
+}
+/* customizando a barra de rolagem */
+
+body::-webkit-scrollbar {
+    width: 20px;               
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--color);    
+    border-radius: 20px;       
+    border: 2px solid #000;
+    transition: all .2s ease-in;  
+}
+
+body::-webkit-scrollbar-track {
+    background: transparent;
+    transition: all .2ms ease-in;  
+}
+
+body::-webkit-scrollbar-track:hover{
+    background: #000;
+    
+}
+
+body::-webkit-scrollbar-thumb:hover{
+    background-color: #bdc3;
+    
 }
