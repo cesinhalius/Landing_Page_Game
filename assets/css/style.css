@@ -1,9 +1,14 @@
+:root{
+    --font:'Roboto',sans-serif;
+    --primary-color: #bdc3c7;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
 *{
     border: none;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--font);
     margin: 0;
     padding: 0;
 }
@@ -69,23 +74,20 @@ main{
     
 }
 
-main .title{
-    border: 1px solid rgba(155, 155, 155, .2);
-    border-radius: 5px;
+.title{
     height: 16vh;
-    margin-left: 20px;
-    margin-top: 60px;
-    width: 30rem;
+    margin-left: 100px;
+    margin-top: 100px;
+    width: 38rem;
 }
 
 .title img{
-    background: rgba(100, 100, 100, .2);
     width: 35vw;
 }
 
 .resume p{
-    border-radius: 5px;
-    color: #bdc3c7;
+    font-size: 20px;
+    color: var(--primary-color);
     margin: 3rem;
     margin-left: 20px;
     text-align: center;
@@ -94,6 +96,7 @@ main .title{
 
 .btn-access{
     display: flex;
+    flex-direction: row;
     margin: 20px;
     margin-left: 50px;
     width: 50vw;
@@ -101,12 +104,15 @@ main .title{
 }
 
 .trailer, .comprar{
-    background: #bdc3c7;
+    align-items: center;
+    background: var(--primary-color);
     border-radius: 5px 0;
+    border: 1px solid transparent;
+    display: flex;
     font-size: 15px;
-    margin-left: 30px;
+    justify-content: center;
+    margin-left: 100px;
     padding: 10px;
-    text-align: center;
     text-transform: uppercase;
     transition: all .5s ease-in-out;
     width: 15rem;
@@ -118,7 +124,8 @@ main .title{
 
 .trailer:hover, .comprar:hover{
     background: transparent;
-    color: #bdc3c7;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
     cursor: pointer;
 }
 
